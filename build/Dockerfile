@@ -12,14 +12,17 @@ ENV MINER_FILE="zm_0.5.8.tar.gz"
 ENV MINER_URL="https://s3-us-west-1.amazonaws.com/mastermine/minebox/${MINER_FILE}"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
- && wget --no-check-certificate $MINER_URL \
+    wget \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir /miner \
  && wget --no-check-certificate $MINER_URL \
- && tar -xvf $MINER_FILE -C /miner --strip-components 1
+ && tar -xvf $MINER_FILE -C /miner --strip-components 1 \
+ && rm $MINER_FILE
+
+WORKDIR /miner
 
 # API port
 EXPOSE 2222/tcp
 
-ENTRYPOINT [ "bin/bash", "/dstm/zm" ]
+ENTRYPOINT [ "bin/bash", "/miner/zm" ]
 CMD [ "--server", "hostname", "--port", "port", "--user", "user", "--pass", "pass", "--telemetry", "0.0.0.0:2222" ]
