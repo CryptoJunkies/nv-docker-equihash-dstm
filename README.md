@@ -1,4 +1,4 @@
-# nv-docker-equihash-dstm [![Build Status](https://travis-ci.org/CultClassik/nv-docker-equihash-dstm.svg?branch=master)](https://travis-ci.org/CultClassik/nv-docker-equihash-dstm)
+# nv-docker-equihash-dstm [![Build Status](https://travis-ci.org/CryptoJunkies/nv-docker-equihash-dstm.svg?branch=master)](https://travis-ci.org/CryptoJunkies/nv-docker-equihash-dstm)
 [Image on Docker Hub](https://hub.docker.com/r/cryptojunkies/dstm/)
 
 Dockerfile to build cryptojunkies/dstm GPU container for mining Equihash based crypto currencies.
