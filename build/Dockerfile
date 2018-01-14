@@ -24,5 +24,5 @@ WORKDIR /miner
 # API port
 EXPOSE 2222/tcp
 
-ENTRYPOINT [ "/bin/bash", "/miner/zm" ]
+ENTRYPOINT /miner/zm
 CMD [ "--server", "hostname", "--port", "port", "--user", "user", "--pass", "pass", "--telemetry", "0.0.0.0:2222" ]
