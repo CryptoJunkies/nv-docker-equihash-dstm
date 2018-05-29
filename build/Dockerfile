@@ -25,4 +25,4 @@ WORKDIR /miner
 EXPOSE 2222/tcp
 
 ENTRYPOINT [ "/miner/zm" ]
-CMD [ "--server", "hostname", "--port", "port", "--user", "user", "--pass", "pass", "--telemetry", "0.0.0.0:2222" ]
+CMD [ "--server", "hostname", "--port", "port", "--user", "user", "--pass", "pass", "--telemetry=0.0.0.0:2222" ]
