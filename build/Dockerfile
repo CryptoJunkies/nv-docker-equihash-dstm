@@ -8,8 +8,8 @@ ENV NVIDIA_VISIBLE_DEVICES=0
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,utility"
 
 # Build env vars
-ENV MINER_FILE="zm_0.6.1.tar.gz"
-ENV MINER_URL="https://s3-us-west-1.amazonaws.com/mastermine/minebox/${MINER_FILE}"
+ENV MINER_FILE="zm_0.6.2.tar.gz"
+ENV MINER_URL="https://diehlabstorage.blob.core.windows.net/mine/${MINER_FILE}"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
